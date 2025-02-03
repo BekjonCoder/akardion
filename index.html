@@ -1,71 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accordion Example</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/accardion.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    .accordion {
-      background-color: #fff;
-      color: #444;
-      cursor: pointer;
-      padding: 15px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
+.accordion {
+    width: 100%;
+    max-width: 400px;
+}
 
-    .accordion:hover {
-      background-color: #e0e0e0;
-    }
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
 
-    .active, .accordion:active {
-      background-color: #ccc;
-    }
+.accordion-item input {
+    display: none;
+}
 
-    .panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      background-color: #fff;
-      padding: 0 15px;
-      border-radius: 0 0 8px 8px;
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
+.accordion-header {
+    display: block;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
 
-    .panel.open {
-      max-height: 200px; 
-    }
-  </style>
+.accordion-content {
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0 15px;
+}
+
+.accordion-item input:checked + .accordion-header + .accordion-content {
+    max-height: 100px;
+    padding: 15px;
+}
+
+    </style>
 </head>
 <body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion1">
+            <label class="accordion-header" for="accordion1">Accordion 1</label>
+            <div class="accordion-content">
+                <p>Salom</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion2">
+            <label class="accordion-header" for="accordion2">Accordion 2</label>
+            <div class="accordion-content">
+                <p>Salom 2</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion3">
+            <label class="accordion-header" for="accordion3">Accordion 3</label>
+            <div class="accordion-content">
+                <p>Salom 3</p>
+            </div>
+        </div>
+    </div>
 
-<button class="accordion">Savol 1</button>
-<div class="panel">
-  <p>Bu yerda Bo'lim 1 ma'lumotlari joylashgan.</p>
-</div>
-
-<button class="accordion">Savol 2</button>
-<div class="panel">
-  <p>Bu yerda Bo'lim 2 ma'lumotlari joylashgan.</p>
-</div>
-
-<button class="accordion">Savol 3</button>
-<div class="panel">
-  <p>Bu yerda Bo'lim 3 ma'lumotlari joylashgan.</p>
-</div>
-
-<script src="script.js"></script>
+    <script src="./js/accardion.js"></script>
 </body>
 </html>
