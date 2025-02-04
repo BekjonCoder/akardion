@@ -1,83 +1,73 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/accardion.css">
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.accordion {
-    width: 100%;
-    max-width: 400px;
-}
-
-.accordion-item {
-    border-bottom: 1px solid #ddd;
-}
-
-.accordion-item input {
-    display: none;
-}
-
-.accordion-header {
-    display: block;
-    padding: 15px;
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-}
-
-.accordion-content {
-    background: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    padding: 0 15px;
-}
-
-.accordion-item input:checked + .accordion-header + .accordion-content {
-    max-height: 100px;
-    padding: 15px;
-}
-
+        section{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .akardion{
+            width: 100%;
+            height: 5rem;
+            background-color: rgb(82, 102, 232);
+            position: relative;
+            cursor: pointer;
+            border-radius: 10px;
+            margin:  auto;
+            margin-bottom: 2px;
+        }
+        h1{
+            color: #fff;
+            position: absolute;
+            left: 2rem;
+        }
+        .list{
+            width: 100%;
+            height: auto;
+            background-color:rgb(21, 37, 145);
+            color: #fff;
+            margin-top: -1rem;
+            border-radius: 10px;
+        }
+        .left{
+            margin-left: 10px;
+        }
+        p{
+            margin-top: -5px;
+            margin-bottom: 1px;
+        }
+        .none{
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="accordion">
-        <div class="accordion-item">
-            <input type="checkbox" id="accordion1">
-            <label class="accordion-header" for="accordion1">Accordion 1</label>
-            <div class="accordion-content">
-                <p>Salom</p>
-            </div>
+    <section>
+        <div class="akardion">
+            <h1>Savol</h1>
         </div>
-        <div class="accordion-item">
-            <input type="checkbox" id="accordion2">
-            <label class="accordion-header" for="accordion2">Accordion 2</label>
-            <div class="accordion-content">
-                <p>Salom 2</p>
-            </div>
+        <div class="list none">
+            <h3 class="left">Bu javob</h3>
+            <p class="left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, deserunt magni autem reiciendis earum recusandae.</p>
         </div>
-        <div class="accordion-item">
-            <input type="checkbox" id="accordion3">
-            <label class="accordion-header" for="accordion3">Accordion 3</label>
-            <div class="accordion-content">
-                <p>Salom 3</p>
-            </div>
+        <div class="akardion">
+            <h1>Savol</h1>
         </div>
-    </div>
-
-    <script src="./js/accardion.js"></script>
+        <div class="list none">
+            <h3 class="left">Bu javob</h3>
+            <p class="left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, deserunt magni autem reiciendis earum recusandae.</p>
+        </div>
+        <div class="akardion">
+            <h1>Savol</h1>
+        </div>
+        <div class="list none">
+            <h3 class="left">Bu javob</h3>
+            <p class="left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, deserunt magni autem reiciendis earum recusandae.</p>
+        </div>
+    </section>
+    <script src="./script.js"></script>
 </body>
 </html>
